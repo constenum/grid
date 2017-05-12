@@ -182,26 +182,20 @@ picture img {
     grid-row: 9 / 10;
     grid-column: 1 / 2;
 } /* end remove reordered item */
+/* CSS Grid item with Flexbox */
 .j {
     grid-row: 10 / 11;
     grid-column: 1 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-    /* CSS Grid remove reorder nested items - reorder is in Media Query */
-    .nested-wrapper {
-        display: grid;
-        grid-template-rows: auto;
-        grid-template-columns: 1fr;
-        grid-gap: 5px 10px;
-    }
-    .k {
-        grid-row: 1 / 2;
-        grid-column: 1 / 2;
-        padding-top: 1em;
-    }
-    .l {
-        grid-row: 2 / 3;
-        grid-column: 1 / 2;
-    } /* end remove nested reordered items */
+.k {
+    flex: 0 0 45%;
+}
+.l {
+    flex: 0 0 45%;
+} /* CSS Grid item with Flexbox */
 
 @media only screen and (min-width: 961px) {
     body {
@@ -251,27 +245,22 @@ picture img {
         grid-row: 4 / 7;
         grid-column: 3 / 4;
     } /* end reorder item */
+    /* CSS Grid item with Flexbox */
     .j {
         grid-row: 7 / 8;
         grid-column: 1 / 4;
-    }
-    /* CSS Grid reorder nested items */
-    .nested-wrapper {
-        display: grid;
-        grid-template-rows: auto;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 5px 10px;
-        padding-top: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .k {
-        grid-row: 1 / 2;
-        grid-column: 2 / 3;
-        padding-top: 0;
+        flex: 0 0 45%;
+        order: 2;
     }
     .l {
-        grid-row: 1 / 2;
-        grid-column: 1 / 2;
-    } /* end nested reorder items */
+        flex: 0 0 45%;
+        order: 1;
+    } /* end CSS Grid item with Flexbox */
 }
 
 /* Flag Icons

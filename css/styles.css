@@ -1,0 +1,283 @@
+/* Border Box Model
+------------------------------ */
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+/* Default Styles
+------------------------------ */
+body {
+    width: 90%;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, "Trebuchet MS", sans-serif;
+}
+header {
+    text-align: center;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    color: rgba(0, 132, 176, .6);
+}
+h1,
+h2 {
+    font-family: 'Black Ops One', cursive;
+    color: #011A91;
+}
+h1 {
+    font-size: 1.7em;
+}
+h2 {
+    font-size: 1.45em;
+}
+h3 {
+    color: #006485;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+span {
+    font-size: .7em;
+    font-style: italic;
+}
+p {
+    font-size: 1em;
+    line-height: 1.3em;
+}
+.san {
+    width: 100%;
+}
+nav {
+    background-color: #00BFFF;
+}
+#sanmenu {
+    font-family: 'Black Ops One', cursive;
+}
+article {
+    background-color: rgba(0, 132, 176, .3);
+    border-radius: 20px;
+    margin: 10px 0;
+    padding: 10px;
+}
+.email {
+    background-color: rgba(0, 132, 176, .6);
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+label,
+input,
+button {
+    display: block;
+    font-weight: bold;
+}
+input {
+    width: 100%;
+    margin-top: 10px;
+    border: 2px #00BFFF solid;
+}
+button {
+    background-color: #FFC02A;
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 10px;
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+aside {
+    background-color: #FFC02A;
+    border-radius: 20px;
+    margin: 10px 0;
+    padding: 10px;
+}
+aside h2,
+aside h3 {
+    margin: 0;
+    padding: 0;
+}
+summary {
+    font-size: .95em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+details {
+    font-size: .8em;
+}
+details:last-child {
+    margin-bottom: 20px;
+}
+details p {
+    margin: 0;
+    padding: 0 0 1px 0;
+}
+footer {
+    background-color: #00BFFF;
+    color: #006485;
+    text-align: center;
+}
+img {
+    margin: 0 5px 10px 0;
+}
+section img {
+    margin: 5px 15px 15px 0;
+}
+picture img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 3px 5px 3px #011A91;
+}
+
+/* CSS Grid System
+------------------------------ */
+.wrapper {
+    display: grid;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+    grid-template-columns: 1fr;
+    grid-gap: 5px 10px;
+}
+
+.a {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+.b {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+.c {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+}
+.d {
+    grid-row: 4 / 5;
+    grid-column: 1 / 2;
+}
+.e {
+    grid-row: 5 / 6;
+    grid-column: 1 / 2;
+}
+.f {
+    grid-row: 6 / 7;
+    grid-column: 1 / 2;
+}
+.g {
+    grid-row: 7 / 8;
+    grid-column: 1 / 2;
+}
+.h {
+    grid-row: 8 / 9;
+    grid-column: 1 / 2;
+}
+/* CSS Grid remove reorder item - reorder is in Media Query */
+.i {
+    grid-row: 9 / 10;
+    grid-column: 1 / 2;
+} /* end remove reordered item */
+.j {
+    grid-row: 10 / 11;
+    grid-column: 1 / 2;
+}
+    /* CSS Grid remove reorder nested items - reorder is in Media Query */
+    .nested-wrapper {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        grid-gap: 5px 10px;
+    }
+    .k {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        padding-top: 1em;
+    }
+    .l {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+    } /* end remove nested reordered items */
+
+@media only screen and (min-width: 961px) {
+    body {
+        width: 80%;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-rows: auto auto auto auto auto auto auto;
+        grid-template-columns: 40% 40% 18%;
+        grid-gap: 5px 10px;
+    }
+
+    .a {
+        grid-row: 1 / 2;
+        grid-column: 1 / 4;
+    }
+    .b {
+        grid-row: 2 / 3;
+        grid-column: 1 / 4;
+    }
+    .c {
+        grid-row: 3 / 4;
+        grid-column: 1 / 4;
+    }
+    .d {
+        grid-row: 4 / 5;
+        grid-column: 1 / 2;
+    }
+    .e {
+        grid-row: 4 / 5;
+        grid-column: 2 / 3;
+    }
+    .f {
+        grid-row: 5 / 6;
+        grid-column: 1 / 2;
+    }
+    .g {
+        grid-row: 5 / 6;
+        grid-column: 2 / 3;
+    }
+    .h {
+        grid-row: 6 / 7;
+        grid-column: 1 / 2;
+    }
+    /* CSS Grid reorder item */
+    .i {
+        grid-row: 4 / 7;
+        grid-column: 3 / 4;
+    } /* end reorder item */
+    .j {
+        grid-row: 7 / 8;
+        grid-column: 1 / 4;
+    }
+    /* CSS Grid reorder nested items */
+    .nested-wrapper {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px 10px;
+        padding-top: 1em;
+    }
+    .k {
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+        padding-top: 0;
+    }
+    .l {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+    } /* end nested reorder items */
+}
+
+/* Flag Icons
+------------------------------
+source:  http://www.countryflags.com/en/ */
+
+/* Aircraft Images
+------------------------------
+source:  https://wall.alphacoders.com/by_sub_category.php?id=57217 */
